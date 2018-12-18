@@ -13,8 +13,14 @@ const checkGuess = () => {
     
     if(guessCount === 1) {
         guesses.textContent = 'Eelnevad pakkumised : ';
+        
     }
-    
+    //array
+//    var guessedNumbers = []
+//    guesseedNumbers.push(userGuess);
+//    if (userGuess.includes(userGuess)) {
+//        lastResult.textContent = 'Samat numbrit ei saa pakkuda'
+//    }
     guesses.textContent += `${userGuess} `;
     //kui kasutaja pakub õigesti
     if (userGuess === randomNumber) {
