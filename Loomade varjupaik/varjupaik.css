@@ -1,0 +1,63 @@
+.container {
+    margin: 0 auto;
+    width: 100%;
+    overflow: auto;
+    clear: both;
+}
+.main-header {
+    border-top: #b43434 15px solid;
+    background: #9eeaea;
+    overflow: auto;
+    width: 100%;
+}
+.main-header .main-nav {
+    width: 70%;
+    float: right;
+    padding-top: 20px;
+}
+.main-header .main-nav ul {
+    float: right;
+}
+.main-nav ul li {
+    float: left;
+    display: inline;
+    margin-right: 3px;
+}
+.main-nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    transition: padding 1s;
+}
+.main-nav ul li a:hover,.main-nav ul li a.active {
+    border-bottom: #73b810 solid 2px;
+    padding-bottom:  40px;
+}
+.box {
+    float: right;
+    width: 350px;
+    height: 250px;
+    overflow: auto;
+    padding-top: 20px;
+    padding-right: 150px;
+    padding-left: 100px;
+}
+.box img {
+    float: left;
+    padding: 5px 10px 0 0;
+    width: 70%;
+    height: 85%;
+    border: #000000 1px solid;
+}
+.main {
+    
+}
+footer {
+    background: #353535;
+    margin-top: 10px 0 10px 0;
+}
+footer p{
+    color: #ffffff;
+    margin: 0;
+    padding-left: 5px;
+    text-align: right;
+}
