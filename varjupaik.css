@@ -27,8 +27,8 @@ html {
 }
 
 .main-header {
-    border-top: #b43434 15px solid;
-    background: #9eeaea;
+    border-top: #F09D51 15px solid;
+    background: #E0DFD5;
     overflow: auto;
     width: 100%;
 }
@@ -57,7 +57,7 @@ html {
 
 .main-nav ul li a:hover,
 .main-nav ul li a.active {
-    border-bottom: #73b810 solid 2px;
+    border-bottom: #F09D51 solid 2px;
     padding-bottom: 20px;
 }
 
@@ -78,18 +78,24 @@ html {
     height: 85%;
     border: #000000 1px solid;
 }
-
-
+.banner {
+    max-height: 400px;
+    background-image: linear-gradient(to right,##215f00,#E8E9EB);
 }
 .mySlides {
-    width: 10%;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }
 
-.main {}
+.main {
+    margin: 0 auto;
+    width: 100%;
+    overflow: auto;
+    clear: both;
+}
 
 footer {
-    background: #353535;
+    background: #313638;
     margin-top: 10px 0 10px 0;
 
 }
