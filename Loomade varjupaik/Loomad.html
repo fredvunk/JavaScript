@@ -4,6 +4,8 @@
 <head>
     <title>Loomade Varjupaik</title>
     <link rel="stylesheet" type="text/css" href="varjupaik.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 
 </head>
 
@@ -12,8 +14,8 @@
         <div class="container">
             <nav class="main-nav">
                 <ul>
-                   <li><a class="active" href="varjupaik.html">Avaleht</a></li>
-                    <li><a href="Loomad.html">Loomad</a></li>
+                   <li><a href="avaleht.html">Avaleht</a></li>
+                    <li><a class="active" href="Loomad.html">Loomad</a></li>
                     <li><a href="Kaotatud.html">Kaotatud loomad</a></li>
                     <li><a href="Toetamine.html">Loomade toetamine</a></li>
                     <li><a href="varjupaigast.html">Varjupaigast</a></li>
@@ -22,37 +24,46 @@
             </nav>
         </div>
     </header>
+
      <div class="container">
-            <div class="box" style="float: left;">
-            <img src="/IMG/box1.jpg" alt="loom" tyle="object-fit: contain; max-height: 400px; width: 100%">
+         <div class="aside">
+             <ul style="list-style-type:none;">
+                 <li><a href="koerad.html">Koerad</a></li>
+                 <li><a href="kassid.html">Kassid</a></li>
+                 <li><a href="muud.html">Muud loomad</a></li>
+             </ul>
+         </div>
+            <div class="box">
+            <a href="koerad.html"><img src="IMG/box1.jpg" alt="loom" style="object-fit: contain; max-height: 400px; width: 100%"></a>
             <h1>4</h1>
                 <h3>Koera</h3>
         </div>
 
-        <div class="box" style="float: left;">
-            <img src="/IMG/box2.png" alt="loom" tyle="object-fit: contain; max-height: 400px; width: 100%">
+        <div class="box">
+            <a href="kassid.html"><img src="IMG/box2.png" alt="loom" style="object-fit: contain; max-height: 400px; width: 100%"></a>
             <h1>10</h1>
             <h3>Kassi</h3>
 
         </div>
 
-        <div class="box" style="float: right;">
-            <img src="/IMG/box3.jpg" alt="loom" tyle="object-fit: contain; max-height: 400px; width: 100%">
+        <div class="box">
+            <a href="muud.html"><img src="IMG/box3.jpg" alt="loom" style="object-fit: contain; max-height: 400px; width: 100%"></a>
             <h1>2</h1>
             <h3>Muud looma</h3>
 
         </div>
         </div>
+
     <footer>
-        <div class="kontakt">
-            <p>Loomade Varjupaik</p><br>
-            <p>Telefon: +372 5555 5555</p><br>
-            <p>E-mail: loomad@varjupaik.ee</p><br>
-            <p>Kopli 1, 50115 Tartu</p>
+        <div class="kontakt">      
+        
+            Loomade Varjupaik<br>
+            Telefon: +372 5555 5555<br>
+            E-mail: loomad@varjupaik.ee<br>
+            Kopli 1, 50115 Tartu
         </div>
     </footer>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>
