@@ -104,3 +104,20 @@
 //    time.innerHTML = '';
 // }
 ////////////// F O R M S //////////////
+// function changeBackground(x){
+//     console.log(x.value);
+//     var  body = document.getElementById('heading');
+//     body.style.color = x.value;
+// }
+function validateForm(){
+    var firstName = document.forms["myForm"]["firstName"].value;
+
+    if(firstName == null || firstName == ""){
+        alert("First name is required");
+        return false;
+    }
+    if(firstName.length < 3){
+        alert("First name is required to be longer");
+        return false;
+    }
+}

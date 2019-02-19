@@ -5,14 +5,25 @@
     <title>Learning JavaScript</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="showDate()">
+<body>
 <div class="header">
     <h1 id="heading">Learning JavaScript</h1>
 </div>
     <div class="container">
+<form method="post" action="something.php" name="myForm" onsubmit="return validateForm()">
+    <div>
+        <label>First Name</label>
+        <input type="text" name="firstName" id="firstName">
+    </div>
+    <br>
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="lastName" id="lastName">
+    </div>
+    <br>
 
-<button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
-        <h1 id="time"></h1>
+    <input type="submit" value="Submit">
+</form>
     </div>
 
 
