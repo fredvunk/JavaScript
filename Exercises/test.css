@@ -1,0 +1,22 @@
+button {
+  width: 20%;
+  border: none;
+  height: 50px;
+  background: rgb(92, 92, 230);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+div {
+  width: 100%;
+  padding: 10px 10px;
+  text-align: left;
+}
+button:hover {
+  transform: translateY(3px);
+  color: white;
+  
+}
