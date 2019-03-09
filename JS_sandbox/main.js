@@ -1,25 +1,66 @@
-const num1 = 100;
-const num2 = 50;
+const firstName = 'William';
+const lastName = 'John';
+const age = 26;
+const str = 'hello there fred';
+const tags = 'web design, web development';
 let val;
 
-// SImple math with numbers
-val = num1 + num2;
-val = num1 - num2;
-val = num1 * num2;
-val = num1 / num2;
+val = firstName + lastName;
 
-// Math Object
-val = Math.PI;
-val = Math.round(2.8);
-val = Math.ceil(2.4);
-val = Math.floor(2.8);
-val = Math.sqrt(64);
-val = Math.abs(-3);
-val = Math.pow(8, 2);
-val = Math.min(2,33,4,1,55,2);
-val = Math.max(2,33,4,1,55,2);
-val = Math.random();
+//Concatenation
+val = firstName + ' ' + lastName;
 
-val = Math.floor(Math.random() * 10 + 1);
+// Append
+val = 'Fred ';
+val += 'Hi';
+
+val = 'Hello, my name is ' + firstName + ' and I am ' + age;
+
+// Escaping
+
+val = 'that\'s awesome, I can\'t wait';
+
+//Length
+val = firstName.length;
+
+// concat
+val = firstName.concat(' ', lastName);
+
+// Change case
+val = firstName.toUpperCase();
+val = firstName.toLowerCase();
+
+val = firstName[2];
+
+//indexOf()
+
+val = firstName.indexOf('l');
+val = firstName.lastIndexOf('l');
+
+//charAt()
+val = firstName.charAt('2');
+
+// substring()
+val = firstName.substring(0, 4);
+
+// get last char
+val = firstName.charAt(firstName.length - 1);
+// slice()
+val = firstName.slice(0,5);
+val = firstName.slice(-3);
+
+//Splitt()
+val = str.split(' ');
+val = tags.split(',');
+
+//replace()
+
+val = str.replace('brad', 'fred');
+
+
+//includes()
+
+val = str.includes('Hello');
+
 
 console.log(val);
