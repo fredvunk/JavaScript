@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<button id="getText">Get text file</button>
+
+<script>
+    document.getElementById('getText').addEventListener('click',getText);
+
+    function getText(){
+        fetch('same.html')
+            .then((res) => res.text())
+            .then((data) => console.log(data))
+    }
+
+</script>
+</body>
+</html>
