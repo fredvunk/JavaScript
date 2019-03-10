@@ -1,47 +1,27 @@
-// WINDOW METHODS / OBJECTS / PROPERTIES
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
 
-// Alert
-// alert('heeeeeeey');
+// function test(){
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('Function Scope: ', a, b, c)
+// }
+//
+// test();
 
-// Prompt
-// const input = prompt();
-// // alert(input);
-
-// Confirm
-// if(confirm('Are u OK?')){
-//     console.log('yes');
-// } else {
-//     console.log('No');
+// if(true){
+//     //block Scope
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('if scope: ', a, b,c)
 // }
 
-let val;
+for(let a = 0; a < 10; a++){
+    console.log(`Loop:  ${a}`);
+}
 
-// Outer height and width
-val = window.outerHeight;
-val = window.outerWidth;
-
-// Inner height and width
-val = window.innerHeight;
-val = window.innerWidth;
-
-// Location Object
-val = window.location;
-val = window.location.hostname;
-
-//Redirect
-// window.location.href = 'url';
-
-//Reload
-// window.location.reload();
-
-// History Can go back to recent pages
-// window.history.go();
-// val = window.history.length;
-
-// Navigator object
-val = window.navigator;
-val = window.navigator.appName;
-val = window.navigator.appVersion;
-
-
-console.log(val);
+console.log('Global Scope: ', a, b, c);
