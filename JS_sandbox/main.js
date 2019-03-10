@@ -1,27 +1,29 @@
-// Global Scope
-var a = 1;
-let b = 2;
-const c = 3;
+// document.getElementById();
 
-// function test(){
-//     var a = 4;
-//     let b = 5;
-//     const c = 6;
-//     console.log('Function Scope: ', a, b, c)
-// }
+// console.log(document.getElementById('task-title'));
 //
-// test();
+// //get things from element
+// console.log(document.getElementById('task-title').id);
 
-// if(true){
-//     //block Scope
-//     var a = 4;
-//     let b = 5;
-//     const c = 6;
-//     console.log('if scope: ', a, b,c)
-// }
+// Change styling
+// document.getElementById('task-title').style.background = '#333';
+// document.getElementById('task-title').style.color = '#fff';
+// document.getElementById('task-title').style.padding = '5px';
+// document.getElementById('task-title').style.display = 'none';
 
-for(let a = 0; a < 10; a++){
-    console.log(`Loop:  ${a}`);
-}
+// Change content
+// document.getElementById('task-title').textContent = 'Task List';
+// document.getElementById('task-title').innerText = 'my List';
+// document.getElementById('task-title').innerHTML = '<span style="color: red">Task List</span>';
 
-console.log('Global Scope: ', a, b, c);
+// const taskTitle = document.getElementById('task-title');
+//
+// taskTitle.style.background = '#333';
+
+// document.querySelector()
+console.log(document.querySelector('#task-title'));
+
+document.querySelector('li').style.color = 'red';
+document.querySelector('ul li').style.color = 'red';
+document.querySelector('li:last-child').style.color = 'red';
+document.querySelector('li:nth-child(3)').style.color = 'red';
