@@ -62,81 +62,63 @@ birthday.setDate(12);
 //     console.log('Color is not red or blue');
 // }
 
-// LOGICAL OPERATORS
+// WHILE LOOP
 
-const name = 'Fred';
-const age = 26;
+// let i = 0;
+//
+// while(i < 10){
+//     console.log('Number ' + i);
+//     i++;
+// }
 
-// AND &&
+// DO WHILE
 
-if (age > 0 && age < 12) {
-    console.log(`${name} is a child`);
-} else if (age >= 13 && age <= 25) {
-    console.log(`${name} is a teenager`);
-} else {
-    console.log(`${name} is an adult`);
+// let i = 100;
+//
+// do {
+//     console.log('Numbers ' + i);
+//     i++;
+// }
+//
+// while(i < 10);
+
+// LOOP TROUGH ARRAY
+// const cars = ['Ford', 'Toyota', 'honda', 'BMW'];
+
+// for(let i = 0; i < cars.length; i++) {
+//  console.log(cars[i]);
+// }
+//
+// // FOR EACH
+// const cars = ['Ford', 'Toyota', 'honda', 'BMW'];
+//
+// cars.forEach(function(car, index, array){
+//     console.log(`${index} : ${car}`);
+//     console.log(array);
+// });
+
+// MAP
+
+// const users = [
+//     {id:1, name:'John'},
+//     {id: 2, name: 'Cara'},
+//     {id: 3, name: 'Joe'},
+//     {id: 4, name: 'Joeeee'}
+// ];
+//
+// const ids = users.map(function(user){
+//     return user.id;
+// });
+//
+// console.log(ids);
+
+// FOR IN LOOP
+
+const user = {
+    firstName: 'Fred',
+    lastName: 'okey',
+    age: 26
 }
-
-// OR ||
-
-if(age < 16 || age >65){
-    console.log(`${name} can not run in race`);
-} else {
-    console.log(`${name} is registred for the race`);
+for(let x in user){
+    console.log(`${x} : ${user[x]}`);
 }
-
-
-const id = 100;
-// TERNARY OPERATOR
-console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
-
-switch(color){
-    case 'red':
-        console.log('Color is red');
-        break;
-    case 'blue':
-        console.log('Color is blue');
-        break;
-    default:
-        console.log('Color is not ');
-        break;
-}
-
-// console.log(greet());
-
-// Function EXPRESSION
-const square = function(x = 3){
-    return x*x;
-};
-
-// console.log(square());
-
-// IMMIDIATLEY INVOKABLE FUNCTIOON EXPRESSIONS -
-// IIFE's
-
-// (function(){
-//     console.log('IIFE Ran..');
-// })();
-
-// (function(name){
-//     console.log('hello ' + name);
-// })('brad');
-
-// PROPERTY METHODS
-const todo = {
-    add: function(){
-        console.log('Add todo..');
-    },
-    edit: function(id){
-        console.log(`Edit todo ${id}`);
-    }
-}
-
-todo.delete = function(){
-        console.log('Delete Todo..');
-    }
-
-
-todo.add();
-todo.edit(22);
-todo.delete();
