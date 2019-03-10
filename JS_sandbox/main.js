@@ -102,29 +102,41 @@ switch(color){
         break;
 }
 
-let day;
+// console.log(greet());
 
-switch(new Date().getDay()){
-    case 0:
-        day = 'sunday';
-        break;
-        case 1:
-        day = 'monday';
-        break;
-        case 2:
-        day = 'tuesday';
-        break;
-        case 3:
-        day = 'wednesday';
-        break;
-        case 4:
-        day = 'thursday';
-        break;
-        case 5:
-        day = 'friday';
-        break;
-        case 6:
-        day = 'saturday';
-        break;
-        }
-        console.log(`Today is ${day}`);
+// Function EXPRESSION
+const square = function(x = 3){
+    return x*x;
+};
+
+// console.log(square());
+
+// IMMIDIATLEY INVOKABLE FUNCTIOON EXPRESSIONS -
+// IIFE's
+
+// (function(){
+//     console.log('IIFE Ran..');
+// })();
+
+// (function(name){
+//     console.log('hello ' + name);
+// })('brad');
+
+// PROPERTY METHODS
+const todo = {
+    add: function(){
+        console.log('Add todo..');
+    },
+    edit: function(id){
+        console.log(`Edit todo ${id}`);
+    }
+}
+
+todo.delete = function(){
+        console.log('Delete Todo..');
+    }
+
+
+todo.add();
+todo.edit(22);
+todo.delete();
