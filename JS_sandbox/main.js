@@ -15,24 +15,24 @@ const person = {
 
 let val;
 
-val = person;
-// specific value
-val = person.firstName;
-val = person['lastName'];
-val = person.age;
-val = person.hobbies[1];
-val = person.address.state;
-val = person.address['city'];
-val = person.getBirthYear();
+const today = new Date();
+let birthday = new Date('9-10-1982');
+birthday = new Date('September 10 1982');
 
-console.log(val);
 
-const people = [
-    {name: 'Joe', age: 22},
-    {name: 'joke', age: 23},
-    {name: 'jane', age: 24}
-];
 
-for(let i = 0; i < people.length; i++){
-    console.log(people[i].name);
-}
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
+
+birthday.setMonth(2);
+birthday.setDate(12);
+
+
+console.log(birthday);
