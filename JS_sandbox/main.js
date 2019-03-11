@@ -1,119 +1,52 @@
-// // CONST & LET
-// let name = 'John';
-// let test;
+// Document.getELemenysByClassName
+
+// const items = document.getElementsByClassName('collection-item');
+// console.log(items);
+// console.log(items[0]);
+// items[0].style.color = 'red';
+// items[3].textContent = 'hello';
 //
-// name = 'jack';
+// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
 //
-// const person = {
-//     name: 'John',
-//     age: 33
-// };
+// console.log(listItems);
+
+// getElementsbyTagName
+
+// let lis = document.getElementsByTagName('li');
+// console.log(lis);
+// console.log(lis[0]);
+// lis[0].style.color = 'red';
+// lis[3].textContent = 'hello';
 //
-// person.name = 'jack';
-// console.log(person);
-
-// Arrow functions
-
-// function sayHello(){
-//     console.log('hello');
-// }
-// sayHello();
-
-// const sayHello = name =>
-//     console.log('Hello ' + name);
-// const fruits = ['apples', 'oranges', 'grapes'];
-// FOREACH ///////////////////
-
-// fruits.forEach((fruit, index) => {
-//     console.log(fruit);
+// // Convert HTML COLLECTION into array
+// lis = Array.from(lis);
+//
+// lis.reverse();
+//
+// lis.forEach(function(li){
+//     console.log(li.className);
+//     li.textContent = 'Hello';
 // });
-// MAP ///////////////////////////////
-// const singleFruit = fruits.map((fruit) => fruit.slice(0, -1).toUpperCase());
 //
-// console.log(singleFruit);
+// console.log(lis);
 
-// // FILTER ////////////////////////////
-// const people = [
-//     {id: 1, name: 'karen'},
-//     {id: 2, name: 'karen2'},
-//     {id: 3, name: 'karen3'}
-// ];
-//
-// const people2 = people.filter(person => person.id !== 2);
-// console.log(people2);
+// querySelectorAll
 
-// SPREAD ...
-// const arr = [1,2,3];
-// const arr2 = [...arr, 4];
-//
-// const person = {
-//     name: 'Brad',
-//     age: 36
-// }
-//
-// const newPerson = {
-//     ...person,
-//     email: 'brad@gmail.com'
-// }
-//
-// console.log(newPerson);
+const items = document.querySelectorAll('ul.collection li.collection-item');
 
-// DESTRUCTING
-// const profile = {
-//     name: 'John dough',
-//     address: {
-//         street: '40 main st',
-//         city: 'tartu'
-//     },
-//     hobbies: ['movies', 'music']
-// };
-//
-// const { name, address, hobbies } = profile;
-//
-// console.log(name, address, hobbies[0]);
+items.forEach(function(item, index){
+item.textContent = `${index}: Hello`;
+});
 
-// CLASSES
-//
-// class Person {
-//     constructor(name) {
-//         this.name = name;
-//     }
-//
-//     greet() {
-//         return `Hello, my name is ${this.name} and I am {this.age}`;
-//     }
-// }
-//
-// const person1 = new Person('Joke');
-// const person2 = new Person('sara');
-//
-// console.log(person1.greet() + ' ' + person2.greet());
-//
-// // SUBCLASSES
-// class Customer extends Person {
-//     constructor(name, age, balance) {
-//         super(name, age);
-//         this.balance = balance;
-//     }
-//
-//     info() {
-//         return `${this.name} owes ${this.balance}`;
-//     }
-// }
-//
-// const customer1 = new Customer('Krissu, 32, 300');
-//
-// console.log(customer1.info());
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even)');
 
-// MODULES
-// file 1 (file1.js)
-export const name = 'Krissu';
+liOdd.forEach(function(li, index){
+    li.style.background = '#ccc';
+});
 
-export default Person;
+for(let i = 0; i < liEven.length; i++){
+    liEven[i].style.background = '#f4f4f4';
+}
 
-// file 2 (file2.js)
-import { name } from './file1';
-
-import Person from './file1';
-
-console.log(name);
+console.log(items);
