@@ -1,25 +1,30 @@
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
 
-// Event handler
+// Clear input
+taskInput.value = '';
 
-// clearBtn.addEventListener('dbclick', runEvent);
-
-// clearBtn.addEventListener('mousedown', runEvent);
-// clearBtn.addEventListener('mouseenter', runEvent);
-// clearBtn.addEventListener('mouseleave', runEvent);
-// clearBtn.addEventListener('mouseover', runEvent);
-card.addEventListener('mousemove', runEvent);
-
-
+// form.addEventListener('submit', runEvent);
+// Keydown
+// taskInput.addEventListener('keydown', runEvent);
+// Keyup
+// taskInput.addEventListener('keyup', runEvent);
+// keypress
+// Focus
+// taskInput.addEventListener('focus', runEvent);
+// Blur
+// taskInput.addEventListener('blur', runEvent);
 
 
 function runEvent(e) {
-    console.log(`Event type: ${e.type}`);
+    console.log(`EVENT TYPE: ${e.type}`);
 
-    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+    // console.log(e.target.value);
 
-    document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY}, 96) `;
+    // heading.innerText = e.target.value;
 
+
+    // // Get input value
+    // console.log(taskInput.value);
 }
