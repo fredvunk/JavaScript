@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card card-body text-center mt-5">
+                <h1 class="heading display-5 pb-3">Laenu Kalkulaator</h1>
+                <form id="loan-form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">$</span>
+                            <input type="number" class="form-control" id="amount"
+                                   placeholder="Laenu Summa">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">%</span>
+                            <input type="number" class="form-control" id="interest"
+                                   placeholder="Intress">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="years"
+                               placeholder="Aastaid maksta">
+                        <div class="form-group">
+                            <input type="submit" value="Arvuta" class="btn btn-dark btn-block">
+                        </div>
+                    </div>
+                </form>
+                <!-- Loader here-->
+                <div id="loading">
+<!--                    <img src="img/loading.gif" alt="">-->
+                </div>
+                <!-- results -->
+                <div id="results" class="pt-4">
+                    <h5>Tulemused</h5>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">Igakuine Makse</span>
+                        <input type="number" class="form-control" id="monthly-payment"
+                        disabled>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">Kogu Summa</span>
+                        <input type="number" class="form-control" id="total-payment"
+                               disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">Kogu Intress</span>
+                        <input type="number" class="form-control" id="total-interestt"
+                               disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.0.js"
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
