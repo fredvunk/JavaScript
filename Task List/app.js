@@ -25,12 +25,12 @@ function loadEventListeners() {
 // Get Tasks from LS
 function getTasks() {
     let tasks;
-    if(localStorage.getItem('tasks') === null) {
+    if (localStorage.getItem('tasks') === null) {
         tasks = [];
     } else {
         tasks = JSON.parse(localStorage.getItem('tasks'));
     }
-    tasks.forEach(function(task){
+    tasks.forEach(function (task) {
 // Create li element
         const li = document.createElement('li');
         // Add class
@@ -75,7 +75,6 @@ function addTask(e) {
     // Store in LS
     storeTaskInLocalStorage(taskInput.value);
 
-
     // Clear input
     taskInput.value = '';
     e.preventDefault();
@@ -84,7 +83,7 @@ function addTask(e) {
 // Store Task
 function storeTaskInLocalStorage(task) {
     let tasks;
-    if(localStorage.getItem('tasks') === null){
+    if (localStorage.getItem('tasks') === null) {
         tasks = [];
     } else {
         tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -110,14 +109,14 @@ function removeTask(e) {
 // Remove from LS
 function removeTaskFromLocalStorage(taskItem) {
     let tasks;
-    if(localStorage.getItem('tasks') === null){
+    if (localStorage.getItem('tasks') === null) {
         tasks = [];
     } else {
         tasks = JSON.parse(localStorage.getItem('tasks'));
     }
 
-    tasks.forEach(function(task, index){
-        if(taskItem.textContent === task){
+    tasks.forEach(function (task, index) {
+        if (taskItem.textContent === task) {
             tasks.splice(index, 1);
         }
     });
@@ -127,11 +126,12 @@ function removeTaskFromLocalStorage(taskItem) {
 
 // Clear Tasks
 function clearTasks() {
-    while(taskList.firstChild) {
+    while (taskList.firstChild) {
         taskList.removeChild(taskList.firstChild);
     }
     clearTasksFromLocalStorage();
 }
+
 // Clear Tasks from LS
 function clearTasksFromLocalStorage() {
     localStorage.clear();
@@ -141,9 +141,9 @@ function clearTasksFromLocalStorage() {
 function filterTasks(e) {
     const text = e.target.value.toLowerCase();
 
-    document.querySelectorAll('.collection-item').forEach(function(task){
+    document.querySelectorAll('.collection-item').forEach(function (task) {
         const item = task.firstChild.textContent;
-        if(item.toLowerCase().indexOf(text) != -1){
+        if (item.toLowerCase().indexOf(text) != -1) {
             task.style.display = 'block';
         } else {
             task.style.display = 'none';

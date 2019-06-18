@@ -16,14 +16,6 @@ if(!validateForm(siteName, siteUrl)){
         name: siteName,
         url: siteUrl
     }
-
-    // local storage test///////////////////////////
-    // localStorage.setItem('test','hello world');
-    // console.log(localStorage.getItem('test'));
-    // localStorage.removeItem('test');
-    // console.log(localStorage.getItem('test'));
-    //console.log(bookmark);
-
     //test if bookmarks is null
     if (localStorage.getItem('bookmarks') === null) {
         // init array
@@ -40,10 +32,8 @@ if(!validateForm(siteName, siteUrl)){
         // re-set back to localStorage
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
-
     //clear form
     document.getElementById('myForm').reset();
-
 
     //re-fetch
     fetchBookmarks()
